@@ -75,6 +75,52 @@
 
         </div>
       </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <p>Tehtävä 8</p>
+        <p>Syötä luvut niin lasken ne potenssiin esim. 5 ja 2 = 5^2 = 25</p>
+        <p>Syötä korotettava luku: </p><input type="text" id="korLuku" value="">
+        <p>Syötä potenssi luku: </p><input type="text" id="potLuku" value="">
+        <button type="button" name="button" onclick="Potenssi()">Laske potenssi</button>
+        <div id="potTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <p>Tehtävä 9</p>
+        <p>Syötä luvut niin kerron niistä suurimman ja pienimmän.</p>
+        <p>Luku 1:</p><input type="text" id="luku1" value="">
+        <p>Luku 2:</p><input type="text" id="luku2" value="">
+        <p>Luku 3:</p><input type="text" id="luku3" value="">
+        <p>Luku 4:</p><input type="text" id="luku4" value="">
+        <p>Luku 5:</p><input type="text" id="luku5" value="">
+        <button type="button" name="button" onclick="SuurPien()">Etsi suurin ja pienin</button>
+        <div id="lukTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <p>Tehtävä 10</p>
+        <p>Anna tekstiä niin muutan siitä salasanan siten, että arvon joka toisen kirjaimen väliin satunnaisen kirjaimen.</p>
+        <p>Anna teksti</p><input type="text" id="muokSalis" value="">
+        <button type="button" name="button" onclick="SalaMuok()">Muokkaa salasanaksi</button>
+        <div id="muokSalaDiv">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <p>Tehtävä 11</p>
+        <p>Anna 2 lukua (jälkimmäisen täytyy olla isompi) niin kerron sinulle niiden välillä olevat parilliset ja parittomat, ja niiden summat.</p>
+        <p>Anna luku: </p><input type="text" id="pienempiLuku" value="">
+        <p>Anna luku, joka on suurempi kuin ensimmäinen: </p><input type="text" id="suurempiLuku" value="">
+        <button type="button" name="button" onclick="parParSum()">Näytä parittomat ja parilliset luvut sekä niiden summat</button>
+        <div id="parParSumTulos">
+
+        </div>
+      </form>
     </header>
   </body>
 </html>
