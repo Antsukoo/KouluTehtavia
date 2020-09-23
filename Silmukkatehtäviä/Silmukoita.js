@@ -2,8 +2,11 @@ function Parilliset(){
   var pLuku = parseInt(document.getElementById('pariluku').value);
   var num = "";
 
-  for (var i = 2; i < pLuku + 2; i += 2) {
+  for (var i = 2; i < pLuku; i += 2) {
     num += i + " ";
+  }
+  if (pLuku % 2 == 0){
+    num += pLuku;
   }
   document.getElementById('pLukuDiv').innerHTML = "<p>" + num + "</p>";
 }
