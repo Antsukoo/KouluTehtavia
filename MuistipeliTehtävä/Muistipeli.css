@@ -1,0 +1,27 @@
+*{
+  text-align: center;
+}
+
+button{
+  padding: 5px;
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  font-family: serif;
+}
+
+table{
+  position: fixed;
+  top: 15%;
+}
+
+tr{
+
+  width: 150px;
+  height: 150px;
+}
+
+td{
+  width: 150px;
+  height: 150px;
+}
