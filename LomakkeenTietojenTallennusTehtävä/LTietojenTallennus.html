@@ -10,10 +10,41 @@
   <body>
     <header>
       <form class="" action="index.html" method="post">
-        <p>Nimesi: </p><input type="text" id="nimi" value="">
+        <p>Nimesi: </p><input type="text" id="nimi" value=""><br>
+        <p>Sukunimesi: </p><input type="text" id="sukunimi" value=""><br>
         <button type="button" name="button" onclick="Tallenna()">Tallenna tiedot</button><br>
-        <button type="button" name="button" onclick="Lataa()">Lataa tiedot</button>
+        <button type="button" name="button" onclick="Lataa()">Lataa tiedot</button><br>
+        <button type="button" name="button" onclick="Poista()">Poista tiedot</button>
       </form>
+      <br>
+      <br>
+      <form class="Title" action="index.html" method="post">
+        <div>
+          <h1>ArvausPeli</h1>
+        </div>
+      </form>
+      <form class="Start" action="index.html" method="post">
+        <button type="button" name="button" onclick="Arvaa()">Aloita arvailu</button> <button type="button" id="aloitaAlus" name="button" onclick="AloitaUudestaan()"></button><button type="button" name="button" onclick="TallennaPisteet()">Tallenna pisteet</button><button type="button" name="button" onclick="LataaPisteet()">Lataa pisteet</button><button type="button" name="button" onclick="PoistaPisteet()">Poista pisteet</button>
+      </form>
+
+      <form class="nappulat" action="index.html" method="post">
+        <div>
+          <h3>Arvaa luku 1-10:</h3>
+        </div>
+
+        <div>
+          <button type="button"  id="napp1" onclick="start1()">1</button><button type="button" id="napp2" onclick="start2()">2</button><button type="button" id="napp3" onclick="start3()">3</button><br>
+          <button type="button" id="napp4" onclick="start4()">4</button><button type="button" id="napp5" onclick="start5()">5</button><button type="button" id="napp6" onclick="start6()">6</button><br>
+          <button type="button" id="napp7" onclick="start7()">7</button><button type="button" id="napp8" onclick="start8()">8</button><button type="button" id="napp9" onclick="start9()">9</button><br>
+          <button type="button" id="napp10" onclick="start10()">10</button>
+        </div>
+      </form>
+
+      <form class="ArvausKerta" action="index.html" method="post">
+        <h3><p id="Voitot">Voitot: </p></h3>
+        <h3><p id="Tappiot">Häviöt: </p></h3>
+      </form>
+
     </header>
   </body>
 </html>
