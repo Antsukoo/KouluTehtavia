@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="LTietojenTallennus.css">
     <script type="text/javascript" src="LTietojenTallennus.js">
 
     </script>
@@ -9,7 +10,7 @@
   </head>
   <body>
     <header>
-      <form class="" action="index.html" method="post">
+      <form class="nameButtons" action="index.html" method="post">
         <p>Nimesi: </p><input type="text" id="nimi" value=""><br>
         <p>Sukunimesi: </p><input type="text" id="sukunimi" value=""><br>
         <button type="button" name="button" onclick="Tallenna()">Tallenna tiedot</button><br>
@@ -23,7 +24,7 @@
           <h1>ArvausPeli</h1>
         </div>
       </form>
-      <form class="Start" action="index.html" method="post">
+      <form class="guessButtons" action="index.html" method="post">
         <button type="button" name="button" onclick="Arvaa()">Aloita arvailu</button> <button type="button" id="aloitaAlus" name="button" onclick="AloitaUudestaan()"></button><button type="button" name="button" onclick="TallennaPisteet()">Tallenna pisteet</button><button type="button" name="button" onclick="LataaPisteet()">Lataa pisteet</button><button type="button" name="button" onclick="PoistaPisteet()">Poista pisteet</button>
       </form>
 
@@ -32,7 +33,7 @@
           <h3>Arvaa luku 1-10:</h3>
         </div>
 
-        <div>
+        <div class="guessNumButtons">
           <button type="button"  id="napp1" onclick="start1()">1</button><button type="button" id="napp2" onclick="start2()">2</button><button type="button" id="napp3" onclick="start3()">3</button><br>
           <button type="button" id="napp4" onclick="start4()">4</button><button type="button" id="napp5" onclick="start5()">5</button><button type="button" id="napp6" onclick="start6()">6</button><br>
           <button type="button" id="napp7" onclick="start7()">7</button><button type="button" id="napp8" onclick="start8()">8</button><button type="button" id="napp9" onclick="start9()">9</button><br>
@@ -45,6 +46,19 @@
         <h3><p id="Tappiot">Häviöt: </p></h3>
       </form>
 
+      <form class="buttonClass" action="index.html" method="post">
+        <button type="button" id="4kertaa2" onclick="kertaa4x2()">4 x 2</button><button type="button" id="4kertaa4" onclick="kertaa4x4()">4 x 4</button><button type="button" id="4kertaa6" onclick="kertaa4x6()">4 x 6</button><button type="button" id="5kertaa2" onclick="kertaa5x2()">5 x 2</button><button type="button" id="5kertaa4" onclick="kertaa5x4()">5 x 4</button><button type="button" id="5kertaa6" onclick="kertaa5x6()">5 x 6</button>
+      </form>
+      <form class="" action="index.html" method="post">
+        <div id="Taulukko">
+
+        </div>
+      </form>
+      <form class="" action="index.html" method="post">
+        <div id="VoittoDiv">
+
+        </div>
+      </form>
     </header>
   </body>
 </html>

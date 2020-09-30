@@ -1,0 +1,65 @@
+/*
+Teidot kysely
+*/
+.nameButtons button{
+  padding: 7px;
+  margin: 5px;
+  width: 100px;
+  height: 25px;
+  font-size: 12px;
+  font-family: serif;
+}
+
+/*
+ArvausPeli aloitus
+*/
+.guessButtons button{
+  padding: 7px;
+  margin: 5px;
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  font-family: serif;
+}
+
+/*
+Arvauspeli numerot
+*/
+.guessNumButtons button{
+  padding: 7px;
+  margin: 5px;
+  width: 100px;
+  height: 60px;
+  font-size: 30px;
+  font-family: serif;
+}
+
+
+
+/*
+Muistipeli
+*/
+.buttonClass button{
+  padding: 7px;
+  margin: 5px;
+  width: 50px;
+  height: 25px;
+  font-size: 12px;
+  font-family: serif;
+}
+
+table{
+  position: relative;
+  top: 15%;
+}
+
+tr{
+
+  width: 150px;
+  height: 150px;
+}
+
+td{
+  width: 150px;
+  height: 150px;
+}

@@ -1,17 +1,10 @@
 var kortKuvat;
-
 var tämMerkki = 0;
-
 var askMerkki = -1;
-
 var vanhTunnusVaiEi;
-
 var odoitusAikaOhi = true;
-
 var valter;
-
 var kortitValittu = false;
-
 var kortitMääräV;
 var kortitMääräH;
 
