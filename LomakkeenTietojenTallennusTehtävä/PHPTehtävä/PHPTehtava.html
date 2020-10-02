@@ -3,8 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script type="text/javascript" src="PHPTehtava.js">
+
+    </script>
   </head>
   <body>
+    <form action="PHPTehtava.php" method="get" onsubmit="tarkista()">
+
+      <label for="etunimi">Etunimesi: </label>
+      <input type="text" id="etunimi" name="etunimiN" value=""><br>
+      <label for="sukunimi">Sukunimesi: </label>
+      <input type="text" id="sukunimi" name="sukunimiN" value=""><br>
+      <label for="lahiosoite">Lähiosoitteesi: </label>
+      <input type="text" id="lahiosoite" name="lahiosoiteN" value=""><br>
+      <label for="postinumero">Postinumerosi: </label>
+      <input type="text" id="postinumero" name="postinumeroN" value=""><br>
+      <label for="postitoimipaikka">Postitoimipaikkasi: </label>
+      <input type="text" id="postitoimipaikka" name="postitoimipaikkaN" value=""><br>
+      <label for="puhelin">Puhelinnumerosi: </label>
+      <input type="text" id="puhelin" name="puhelinN" value=""><br>
+      <label for="sahko">Sähköpostiosoitteesi: </label>
+      <input type="text" id="sahko" name="sahkoN" value=""><br>
+      <label for="työA">Työnantajasi tai oppilaitoksesi: </label>
+      <input type="text" id="työA" name="työAN" value=""><br>
+      <label for="amNi">Ammattinimikkeesi</label>
+      <input type="text" id="amNi" name="amNiN" value=""><br>
+      <label for="synA">Syntymäaikasi: </label>
+      <input type="text" id="synA" name="synAN" value=""><br>
+      <label for="ruoVa">Erikoisruokavaliosi: </label>
+      <input type="text" id="ruoVa" name="ruoVaN" value="">
+
+      <button type="submit" id="lahetaNappula" name="button">Lähetä tiedot</button>
+
+    </form>
 
   </body>
 </html>
