@@ -141,6 +141,10 @@ function Arvaa(){
     arvNyt = true;
     //Ja luo satunnaisen numeron 0 ja 10 väliltä.
     numero = Math.floor(Math.random() * 11);
+
+    if (numero == 0){
+      numero = 1;
+    }
   }
 }
 
@@ -167,12 +171,14 @@ function ArvaaUudest(){
   document.getElementById('napp8').innerHTML = "8";
   document.getElementById('napp9').innerHTML = "9";
   document.getElementById('napp10').innerHTML = "10";
+
+  if (numero == 0){
+    numero = 1;
+  }
 }
 
 //Jos satunnaisesti valittu numero on 0 se vaihdetaan numeroksi 1.
-if (numero == 0){
-  numero = 1;
-}
+
 
 //Functio nappulalle 1.
 function start1(){
@@ -852,8 +858,13 @@ function nayta(merk){
         odoitusAikaOhi = false;
         vanhTunnusVaiEi = null;
       }else if (vanAlt == altEiVan){
+
+        tunnus.removeAttribute('onclick');
+        vanhTunnusVaiEi.removeAttribute('onclick');
         askMerkki.innerHTML = '<img src="korttienKuvat/'+alter+'">';
         tunnus.innerHTML = '<img src="korttienKuvat/'+alter+'">';
+
+
         odotaHetkiVoit();
         odoitusAikaOhi = false;
         vanhTunnusVaiEi = null;
@@ -887,6 +898,7 @@ function odotaHetki(tunn, vanhTunnus){
 
 function odotaHetkiVoit(){
   setTimeout(function(){
+
     odoitusAikaOhi = true;
   }, 1000);
 

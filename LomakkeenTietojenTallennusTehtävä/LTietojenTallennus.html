@@ -6,10 +6,27 @@
     <script type="text/javascript" src="LTietojenTallennus.js">
 
     </script>
+    <script type="text/javascript" src="Silmukat.js">
+
+    </script>
+    <script type="text/javascript" src="Switch.js">
+
+    </script>
+    <script type="text/javascript" src="Nelilaskin.js">
+
+    </script>
+    <script type="text/javascript" src="lomake.js">
+
+    </script>
     <title></title>
   </head>
   <body>
     <header>
+      <form class="Title" action="index.html" method="post">
+        <div>
+          <h1>Nimen tallennus</h1>
+        </div>
+      </form>
       <form class="nameButtons" action="index.html" method="post">
         <p>Nimesi: </p><input type="text" id="nimi" value=""><br>
         <p>Sukunimesi: </p><input type="text" id="sukunimi" value=""><br>
@@ -27,7 +44,7 @@
       <form class="guessButtons" action="index.html" method="post">
         <button type="button" name="button" onclick="Arvaa()">Aloita arvailu</button> <button type="button" id="aloitaAlus" name="button" onclick="AloitaUudestaan()"></button><button type="button" name="button" onclick="TallennaPisteet()">Tallenna pisteet</button><button type="button" name="button" onclick="LataaPisteet()">Lataa pisteet</button><button type="button" name="button" onclick="PoistaPisteet()">Poista pisteet</button>
       </form>
-
+      <br>
       <form class="nappulat" action="index.html" method="post">
         <div>
           <h3>Arvaa luku 1-10:</h3>
@@ -40,12 +57,17 @@
           <button type="button" id="napp10" onclick="start10()">10</button>
         </div>
       </form>
-
+      <br>
       <form class="ArvausKerta" action="index.html" method="post">
         <h3><p id="Voitot">Voitot: </p></h3>
         <h3><p id="Tappiot">Häviöt: </p></h3>
       </form>
-
+      <br>
+      <form class="Title" action="index.html" method="post">
+        <div>
+          <h1>Muistipeli</h1>
+        </div>
+      </form>
       <form class="buttonClass" action="index.html" method="post">
         <button type="button" id="4kertaa2" onclick="kertaa4x2()">4 x 2</button><button type="button" id="4kertaa4" onclick="kertaa4x4()">4 x 4</button><button type="button" id="4kertaa6" onclick="kertaa4x6()">4 x 6</button><button type="button" id="5kertaa2" onclick="kertaa5x2()">5 x 2</button><button type="button" id="5kertaa4" onclick="kertaa5x4()">5 x 4</button><button type="button" id="5kertaa6" onclick="kertaa5x6()">5 x 6</button>
       </form>
@@ -59,6 +81,295 @@
 
         </div>
       </form>
+      <br>
+      <h1>Silmukka tehtävät</h1>
+      <br>
+
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 1</h3>
+        <p>Syötä parillinen luku, ja minä näytän kaikki parilliset luvut syöttämääsi numeroon asti poislukien 0:n.</p>
+        <input type="text" id="pariluku" value=""><br>
+        <button type="button" name="button" onclick="Parilliset()">Tulosta parilliset</button>
+        <div id="pLukuDiv">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 2</h3>
+        <p>Syötä jokin sana niin muutan sen salasanaksi.</p>
+        <input type="text" id="salis" value=""><br>
+        <button type="button" name="button" onclick="Salasana()">Muuta salasanaksi</button>
+        <div id="salasanaDiv">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 3</h3>
+        <p>Syötä sana ja kerron onko siinä ö-kirjainta.</p>
+        <input type="text" id="öSana" value=""><br>
+        <button type="button" name="button" onclick="öTarkastus()">Tarkasta</button>
+        <div id="öTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 4</h3>
+        <p>Syötä luku niin annan sen kertoman.</p>
+        <input type="text" id="kertSana" value=""><br>
+        <button type="button" name="button" onclick="Kertoma()">Näytä kertoma</button>
+        <div id="kertTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 5</h3>
+        <p>Paina nappia niin annan sinulle luvut yhdestä sataan, mutta jos luku on jaollinen on kolmella siitä tulee 'Hip', jos se on jaollinen kuudella siitä tulee 'Heijaa', ja jos se on jaollinen kummallakin, siitä tulee 'Hip Heijaa'.</p>
+        <button type="button" name="button" onclick="HipHeijaa()">Näytä luvut</button>
+        <div id="hipHTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 6</h3>
+        <p>Paina nappia niin tulostan 10 ensimmäistä numeroa.</p>
+        <button type="button" name="button" onclick="KymEkaa()">Tulosta kymmenen ensimmäistä numeroa</button>
+        <div id="kymEkaaTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 7</h3>
+        <p>Paina nappia niin lasken 10 ensimmäistä numeroa yhteen ja kerron sinulle tuloksen.</p>
+        <button type="button" name="button" onclick="KymEkaaYhteen()">Näytä tulos</button>
+        <div id="kymEkaaYhtTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 8</h3>
+        <p>Syötä luvut niin lasken ne potenssiin esim. 5 ja 2 = 5^2 = 25</p>
+        <p>Syötä korotettava luku: </p><input type="text" id="korLuku" value="">
+        <p>Syötä potenssi luku: </p><input type="text" id="potLuku" value="">
+        <button type="button" name="button" onclick="Potenssi()">Laske potenssi</button>
+        <div id="potTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 9</h3>
+        <p>Syötä luvut niin kerron niistä suurimman ja pienimmän.</p>
+        <p>Luku 1:</p><input type="text" id="luku1" value="">
+        <p>Luku 2:</p><input type="text" id="luku2" value="">
+        <p>Luku 3:</p><input type="text" id="luku3" value="">
+        <p>Luku 4:</p><input type="text" id="luku4" value="">
+        <p>Luku 5:</p><input type="text" id="luku5" value="">
+        <button type="button" name="button" onclick="SuurPien()">Etsi suurin ja pienin</button>
+        <div id="lukTulos">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 10</h3>
+        <p>Anna tekstiä niin muutan siitä salasanan siten, että arvon joka toisen kirjaimen väliin satunnaisen kirjaimen.</p>
+        <p>Anna teksti</p><input type="text" id="muokSalis" value="">
+        <button type="button" name="button" onclick="SalaMuok()">Muokkaa salasanaksi</button>
+        <div id="muokSalaDiv">
+
+        </div>
+      </form>
+      <br>
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 11</h3>
+        <p>Anna 2 lukua (jälkimmäisen täytyy olla isompi) niin kerron sinulle niiden välillä olevat parilliset ja parittomat, ja niiden summat.</p>
+        <p>Anna luku: </p><input type="text" id="pienempiLuku" value="">
+        <p>Anna luku, joka on suurempi kuin ensimmäinen: </p><input type="text" id="suurempiLuku" value="">
+        <button type="button" name="button" onclick="parParSum()">Näytä parittomat ja parilliset luvut sekä niiden summat</button>
+        <div id="parParSumTulos">
+
+        </div>
+      </form>
+      <br>
+      <h1>Switch tehtävät</h1>
+      <br>
+      <!--Tehtävä 1 jossa lasketaan käyttäjän syöttämän sanan Scrabble pisteet-->
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 1</h3>
+        <p>Syötä jokin sana jonka pisteet lasketaan (Scrabble): </p>
+        <input type="text" id="sana" value="">
+        <button type="button" name="button" onclick="ScrabblePisteet()">Laske kirjainpisteet</button>
+        <div id="Tulos">
+
+        </div>
+      </form>
+      <!--Tehtävä 2 jossa arvotaan käyttäjälle 7 lottonumeroa-->
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 2</h31>
+        <p>Arvo itsellesi lottonumerot:</p>
+        <button type="button" name="button" onclick="LottoNumerot()">Arvo</button>
+        <div id="lotot">
+
+        </div>
+      </form>
+      <!--Tehtävä 3 jossa muutetaan näkyvä lukujono taulukoksi-->
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 3</h3>
+        <p>Muunnan tämän taulukoksi: [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]</p>
+        <button type="button" name="button" onclick="Taulukko()">Muunna tauluksi</button>
+        <div id="tauluT">
+
+        </div>
+      </form>
+      <!--Tehtävä 4 jossa arvotaan 5 korttia korttipakasta-->
+      <form class="" action="index.html" method="post">
+        <h3>Tehtävä 4</h3>
+        <p>Paina nappulaa niin arvon 5 korttia korttipakasta:</p>
+        <button type="button" name="button" onclick="Kortit()">Paina minua</button>
+        <div id="kortitTulos">
+
+        </div>
+      </form>
+      <br>
+      <!--Sivun otsikko-->
+      <h1 id="otsikko">Käyttäjätarinat</h1>
+
+      <!--Sivun kuvaus teksti-->
+      <p id="kuvaus">Tämä on kirjautumislomake joka sinun täytyy täyttää kirjautuaksesi.</p>
+
+      <!--Kysely lomake-->
+      <form class="Tiedot" id="kyselylomake" action="index.html" method="post">
+
+        <!--Nimeä, emailia ja ikää kysyvät syöttökohdat ja niiden nimi-"kyltit"-->
+        <label for="nimi" id="nimisyotto">Syötä nimesi:</label>
+        <input autocomplete="off" class="tied" type="text" minlength="3" required id="nimi" value=""><br>
+        <label for="email" id="emailsyotto">Syötä sähköpostisi:</label>
+        <input autocomplete="off" class="tied" type="email" required id="email" value=""><br>
+        <label for="ika" id="ikasyotto">Syötä ikäsi:</label>
+
+        <!--Tekstiä, joka kertoo min ja max iän mitä voi syöttää-->
+        min 15 <
+        <input autocomplete="off" class="ikaNum" type="number" min="15" max="130" required id="ika" value="">
+        > max 130
+        <br>
+
+        <!--Dropdown valikko mistä voi valita kahden vaihtoehdon väliltä-->
+        <select id="pudotus" class="dropD" name="">
+          <option value="pudotusPudotus">2x Pudotus</option>
+          <option value="pudotus">1x Pudotus</option>
+        </select>
+        <br>
+
+        <!--Radionappularyhmä jossa on kolme vaihtoehtoa joista voi valita vain yhden, ja niiden nimi-"kyltit"-->
+        <input id="tä" type="radio" name="radiovalinta">
+        <label for="tä">Tämä, </label>
+        <input id="täm" type="radio" name="radiovalinta">
+        <label for="täm">tämä, </label>
+        <input id="tämä" type="radio" name="radiovalinta">
+        <label for="tämä">vai tämä</label>
+        <br>
+
+        <!--Checkboxryhmä jossa on kolme vaihtoehtoa joista voi valita mitä haluaa, ja niiden nimi-"kyltit"-->
+        <input id="ch" type="checkbox" name="valinta" value="valinta1">
+        <label for="ch">Tämä, </label>
+        <input id="che" type="checkbox" name="valinta" value="valinta2">
+        <label for="che">tämä, </label>
+        <input id="chec" type="checkbox" name="valinta" value="valinta3">
+        <label for="chec">ja tämä</label>
+        <br>
+
+        <!--Kommentti tekstiruudun ohjeteksti-->
+        <p>Jos haluat kommentoida, voit tehdä sen tässä: </p>
+
+        <!--Kommenttiruutu-->
+        <textarea class="kommentitlauta" name="kommentit" rows="8" cols="80"></textarea>
+        <br>
+
+        <!--Lähetä nappula-->
+        <input id="lähetäNapp" type="submit" name="lähetänappula" value="Lähetä"></input>
+      </form>
+      <br>
+      <h1>Laskin</h1>
+      <!--Lomake kaikelle näkyvälle-->
+      <form class="" action="index.html" method="post">
+        <!--Lasku Näyttö-->
+        <div class="numerotNäyttö">
+          <p id="Näyttö"></p>
+        </div>
+        <!--Lasku Tilanne-->
+        <div class="numerotLasku">
+          <p id="Lasku"></p>
+        </div>
+        <!--Nappulat-->
+        <div class="numerotNappulat">
+          <button class="muuKuinNolla" type="button" name="button" onclick="AC()">AC</button><button class="muuKuinNolla" type="button" name="button" onclick="C()">C</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('%')">%</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('/')">/</button><br>
+          <button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('7')">7</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('8')">8</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('9')">9</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('*')">*</button><br>
+          <button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('4')">4</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('5')">5</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('6')">6</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('-')">-</button><br>
+          <button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('1')">1</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('2')">2</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('3')">3</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('+')">+</button><br>
+          <button class="nollaNappula" type="button" name="button" onclick="Lisaa('0')">0</button><button class="muuKuinNolla" type="button" name="button" onclick="Lisaa('.')">.</button><button class="muuKuinNolla" type="button" name="button" onclick="yhtäS()">=</button>
+        </div>
+
+      </form>
+      <br>
+      <h1>Kirjautumislomake</h1> <!--Lomakkeen nimi-->
+      <form action="/action_page.php">
+          Etunimi:<br>
+          <input class="nimiI" type="text" id="nimi" value=""> <!--Tekstikenttään tulee nimi-->
+          <br> <!--Väliä eri osioille-->
+          Salasana:<br>
+          <input class="salasanaI" type="password" id="salasana" value=""> <!--Tekstikenttään tulee salasana-->
+          <br>
+
+        <p>Millainen koneen käyttäjä olet?</p>
+        <form>
+          <!--Poistin value atribuutit sillä niitä ei tarvittu-->
+          <input id="himo" type="radio" name="radiovalinta"> <!--radio antaa tehdä yhden valinnan monesta-->
+          <label for="himo">Himopelaaja</label> <!--Tekstit valinnoille-->
+          <input id="opisk" type="radio" name="radiovalinta">
+          <label for="opisk">Käytän opiskeluun/työhön</label>
+          <input id="enkäyt" type="radio" name="radiovalinta" value="En käytä tietokonetta">
+          <label for="enkäyt">En käytä tietokonetta</label>
+        </form>
+
+      <p>Mitä mieltä olet sivustani tähän asti?</p>
+      <form>
+
+          <input id="hyvin" type="checkbox" name="valinta"> <!--checkbox antaa valita useamman vaihtoehdon-->
+          <label for="hyvin">Hyvin toimii!</label>
+          <input id="mahtava" type="checkbox" name="valinta">
+          <label for="mahtava">Mahtava!</label>
+          <input id="hieno" type="checkbox" name="valinta">
+          <label for="hieno">Hieno!</label>
+        </form>
+
+      <p>Lempiaine koulussa?</p>
+      <form action="/action_page.php">
+      <select class="lemppari" id="Ammattiaineet">
+        <option value="">Valitse vastaus</option> <!--Lisäsin yhden valinnan, jotta sen pystyy tarkistamaan että onko siihen vastattu-->
+        <option value="matematiikka">Matematiikka</option> <!--Pudotusvalikko, voi tehdä yhden valinnan monesta-->
+        <option value="äidinkieli">Äidinkieli</option>
+        <option value="liikunta">Liikunta</option>
+        <option value="biologia">Biologia</option>
+        <option value="englanti">Englanti</option>
+        </select>
+        <br>
+        </form>
+
+        <p>Mitä kehitettävää sivulla olisi?</p>
+        <textarea id="comment" rows="8" cols="80" form="usrform"></textarea><!--Luo määritellyn alueen vapaalle kommentoinnille-->
+        <br>
+        <!--nappula, joka tarkistaa onko kaikkiin osioihin vastattu, jonka jälkeen laittaa 'Lähetä' nappulan näkyviin-->
+        <button type="button" name="button" onclick="TietojenTarkistus()">Paina minua</button>
+        <br><br>
+
+        <input type="hidden" id="lähetäNappula" value="Lähetä"> <!--Painonappi, joka lähettää tiedot määrättyyn paikkaan-->
     </header>
   </body>
 </html>
